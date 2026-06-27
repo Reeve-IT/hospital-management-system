@@ -1,0 +1,18 @@
+service: hospital-management-system
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.12
+
+plugins:
+  - serverless-offline
+
+functions:
+  email:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /send-email
+          method: post

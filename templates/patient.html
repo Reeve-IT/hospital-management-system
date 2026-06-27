@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patient Dashboard</title>
+</head>
+
+<body>
+
+<h1>Patient Dashboard</h1>
+
+<a href="/logout/">Logout</a>
+
+<hr>
+
+<h2>Available Slots</h2>
+
+<ul>
+
+{% for slot in slots %}
+
+<li>
+
+Dr.
+
+{{ slot.doctor.username }}
+
+|
+
+{{ slot.date }}
+
+|
+
+{{ slot.start_time }} - {{ slot.end_time }}
+
+<a href="/book/{{ slot.id }}/">
+
+<button>
+
+Book
+
+</button>
+
+</a>
+</li>
+
+{% empty %}
+
+<li>No available slots.</li>
+
+{% endfor %}
+
+</ul>
+
+</body>
+
+</html>
