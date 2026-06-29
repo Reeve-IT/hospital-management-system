@@ -12,7 +12,6 @@
 ### Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd hospital-management-system
 ```
 
